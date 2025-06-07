@@ -1,0 +1,340 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    position: sticky;
+    top: 0;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+    z-index:1;
+    font-family: "Segoe UI", sans-serif;
+
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: white;
+}
+.no-underline:hover {
+    color: #ad2f93;
+}
+
+.nav-right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-item {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover,.nav-item.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8)
+}
+
+.profile-img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: linear-gradient(to top right, rgba(11, 118, 172, 0.6), rgba(190, 52, 178, 0.2)), url('img/dream.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+/* Responsive flex widths */
+.container > div {
+  flex: 1;
+  margin: 10px;
+}
+
+/* Left side wider on large screens */
+@media (min-width: 901px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .container > div:first-child {
+    flex: 3;
+  }
+
+  .container > div:last-child {
+    flex: 1;
+  }
+}
+
+/* Stack on small screens */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    /* padding: 20px; */
+  }
+
+  .container > div {
+    width: 100%;
+    /* margin: 10px 0; */
+  }
+}
+
+.dream-input {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.dream-input h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  resize: none;
+  font-size: 16px;
+}
+
+.btns button {
+  background-color: #7f53ac;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  margin: 10px 5px 0 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btns button:hover {
+  background-color: #5d3ab9;
+}
+
+.progress-panel {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-height: 250px;
+  min-height: 250px;
+  height: 250px;
+}
+
+.progress-circle {
+  width: 140px;
+  height: 140px;
+  min-width: 140px;
+  min-height: 140px;
+  max-width: 140px;
+  max-height: 140px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border-radius: 50%;
+  border: 12px solid #00ffae;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0 15px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.dream-post {
+  background: rgba(255, 255, 255,0.15);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  width: 90%;
+  margin-top: 20px;
+  margin-left:50px;
+  position: relative;
+}
+
+.dream-post h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.dream-post .btn {
+  background-color: #7f53ac;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dream-post .btn:hover {
+  background-color: #5d3ab9;
+}
+
+.delete-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: linear-gradient(to bottom right, #e62737 , #ffc371);
+  color: white;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.delete-icon:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to bottom right, #e60000, #ff9966);
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 900px) {
+  .progress-panel {
+    width: 100%;
+    margin-top: 20px;
+    align-self: stretch;
+  }
+  .btns button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  .dream-input h2 {
+    font-size: 18px;
+  }
+  .dream-post h3 {
+    font-size: 18px;
+  }
+  .progress-circle {
+    width: 80px;
+    height: 80px;
+    border-width: 8px;
+    font-size: 16px;
+  }
+}
+
+.no-underline.active {
+ font-weight: bold;
+ color: #ad2f93;
+}
+
+@media (max-width: 768px) {
+  .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-right {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .dream-post{
+      margin-left: 0px;
+    }
+}
+
+footer {
+  background-color: #672bab;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.progress-slider {
+  width: 100%;
+  margin-top: 15px;
+  accent-color: #7f53ac; /* Modern browsers */
+  height: 4px;
+  border-radius: 5px;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0 10px 0;
+  background: rgba(127, 83, 172, 0.08);
+  padding: 10px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(127, 83, 172, 0.07);
+}
+
+.slider-container label {
+  font-size: 15px;
+  color: #7f53ac;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.progress-slider {
+  width: 120px;
+  accent-color: #7f53ac;
+  height: 6px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #7f53ac 0%, #00ffae 100%);
+  outline: none;
+}
+
+.slider-container output {
+  min-width: 28px;
+  text-align: center;
+  font-weight: bold;
+  color: #7f53ac;
+  background: #fff;
+  border-radius: 6px;
+  padding: 2px 6px;
+  border: 1px solid #e0e0e0;
+  margin-left: 4px;
+  font-size:15px;
+}
