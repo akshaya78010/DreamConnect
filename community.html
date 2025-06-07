@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DreamConnect - Community</title>
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Navigation buttons at the top */
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 40, 100, 0.75);
+  z-index: -1;
+}
+
+
+
+/* Create Team Button */
+.create-team {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: #ffe066;
+  color: #1f4b99;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.create-team:hover {
+  transform: scale(1.05);
+}
+
+/* Community Grid */
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 50px;
+}
+
+/* User Cards */
+.user-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  backdrop-filter: blur(6px);
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #ffe066;
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+}
+
+
+    /* Chat and Meet buttons */
+    .card-buttons {
+      margin-top: 10px;
+    }
+
+    .card-buttons button {
+      margin: 5px;
+      padding: 6px 14px;
+      border: none;
+      border-radius: 20px;
+      background-color: #00bcd4;
+      color: white;
+      cursor: pointer;
+      font-size: 0.9em;
+      transition: background-color 0.3s;
+    }
+
+    .no-underline.active {
+      font-weight: bold;
+      color: #ad2f93;
+    }
+
+    .card-buttons button:hover {
+      background-color: #028a96;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Options -->
+  <!-- Header Section -->
+<nav class="header">
+        <div class="nav-left">
+            <div class="logo">DreamConnect</div>
+        </div>
+        <div class="nav-right">
+            <div class="nav-item">
+                <a href="home-page1.html" class="no-underline">Home</a>
+            </div>
+            <div class="nav-item">
+                <a href="explore1.html" class="no-underline">Explore</a>
+            </div>
+            <div class="nav-item">
+                <a href="mydreamwall.html" class="no-underline">My Dream Wall</a>
+            </div>
+            <div class="nav-item">
+                <a href="community.html" class="no-underline active">Community</a>
+            </div>
+            <div class="nav-item">
+                <a href="Contact_us.html" class="no-underline">Contact Us</a>
+            </div>
+            <div class="nav-item">
+                <a href="about.html" class="no-underline">About us</a>
+            </div>
+            <div class="user">
+                <a href="profile.html" class="no-underline">
+                    <img class="profile-img" src="img/profile.jpg" alt="Profile">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+  <header>
+    <h1>🌐 DreamConnect Community</h1>
+    <p>Connect, Collaborate & Grow Together</p>
+    <button class="create-team"><i class="fas fa-plus"></i> Create Team</button>
+  </header>
+
+  <!-- Followers Section -->
+  <section class="title-section">
+    <h2>My Followers</h2>
+  </section>
+
+  <main class="community-grid">
+    <section class="user-card">
+      <i class="fas fa-user-friends card-icon"></i>
+      <h2>Anjali Verma</h2>
+      <p>🎯 Goal: Become a Data Scientist</p>
+      <p>🌱 In Progress (60%)</p>
+      <div class="card-buttons">
+        <button><i class="fas fa-comment-dots"></i> Chat</button>
+        <button><i class="fas fa-video"></i> Meet</button>
+      </div>
+    </section>
+
+    <section class="user-card">
+      <i class="fas fa-user-friends card-icon"></i>
+      <h2>Rohit Kumar</h2>
+      <p>🏋‍♂ Goal: Start a Fitness Blog</p>
+      <p>✅ Completed</p>
+      <div class="card-buttons">
+        <button><i class="fas fa-comment-dots"></i> Chat</button>
+        <button><i class="fas fa-video"></i> Meet</button>
+      </div>
+    </section>
+
+    <section class="user-card">
+      <i class="fas fa-user-friends card-icon"></i>
+      <h2>Sneha Rao</h2>
+      <p>👩‍💻 Learning Full-Stack Dev</p>
+      <p>🔥 In Progress (80%)</p>
+      <div class="card-buttons">
+        <button><i class="fas fa-comment-dots"></i> Chat</button>
+        <button><i class="fas fa-video"></i> Meet</button>
+      </div>
+    </section>
+
+    <section class="user-card">
+      <i class="fas fa-user-friends card-icon"></i>
+      <h2>Arjun Das</h2>
+      <p>🚀 Dream: Launch Tech Startup</p>
+      <p>🌟 Planning Stage</p>
+      <div class="card-buttons">
+        <button><i class="fas fa-comment-dots"></i> Chat</button>
+        <button><i class="fas fa-video"></i> Meet</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Related Profiles Section -->
+  <section class="title-section">
+    <h2>Profiles Related to Your Dream</h2>
+  </section>
+
+  <main class="community-grid">
+    <section class="user-card">
+      <i class="fas fa-user-friends card-icon"></i>
+      <h2>Meera Joshi</h2>
+      <p>📊 Goal: Master Data Analysis</p>
+      <p>🌱 In Progress (45%)</p>
+      <div class="card-buttons">
+        <button><i class="fas fa-comment-dots"></i> Chat</button>
+        <button><i class="fas fa-video"></i> Meet</button>
+      </div>
+    </section>
+
+    <section class="user-card">
+      <i class="fas fa-user-friends card-icon"></i>
+      <h2>Vikram Singh</h2>
+      <p>💻 Dream: Build AI Applications</p>
+      <p>🔥 In Progress (70%)</p>
+      <div class="card-buttons">
+        <button><i class="fas fa-comment-dots"></i> Chat</button>
+        <button><i class="fas fa-video"></i> Meet</button>
+      </div>
+    </section>
+
+    <section class="user-card">
+      <i class="fas fa-user-friends card-icon"></i>
+      <h2>Priya Nair</h2>
+      <p>🎓 Learning Machine Learning</p>
+      <p>🌱 In Progress (55%)</p>
+      <div class="card-buttons">
+        <button><i class="fas fa-comment-dots"></i> Chat</button>
+        <button><i class="fas fa-video"></i> Meet</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 DreamConnect • Empowering dreams through community</p>
+  </footer>
+</body>
+</html>
